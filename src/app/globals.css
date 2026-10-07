@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #212c44;
+  --blue: #0073e6;
+  --blue-deep: #215bff;
+  --teal: #00bf88;
+  --teal-bright: #00e0a5;
+  --surface: #f4f7fb;
+  --surface-elevated: #ffffff;
+  --ink: #212c44;
+  --ink-muted: #5a6578;
+  --border: rgba(33, 44, 68, 0.12);
+  --critical: #e11d48;
+  --high: #ea580c;
+  --medium: #d97706;
+  --ok: #059669;
+  --background: var(--surface);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: var(--navy);
+  --color-brand: var(--blue);
+  --color-brand-deep: var(--blue-deep);
+  --color-teal: var(--teal);
+  --color-teal-bright: var(--teal-bright);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-border: var(--border);
+  --color-critical: var(--critical);
+  --color-high: var(--high);
+  --color-medium: var(--medium);
+  --color-ok: var(--ok);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--blue) 25%, white);
+  color: var(--navy);
+}
+
+.font-display {
+  font-family: var(--font-display), var(--font-body), system-ui, sans-serif;
+}
+
+.bg-atmosphere {
+  background:
+    radial-gradient(120% 80% at 10% -10%, rgba(0, 115, 230, 0.18), transparent 55%),
+    radial-gradient(90% 70% at 95% 5%, rgba(0, 191, 136, 0.16), transparent 50%),
+    radial-gradient(70% 50% at 50% 100%, rgba(33, 91, 255, 0.08), transparent 55%),
+    linear-gradient(180deg, #eef4fb 0%, #f7fafc 45%, #ffffff 100%);
+}
+
+.bg-hero-mesh {
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(0, 115, 230, 0.22), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 20% 70%, rgba(0, 224, 165, 0.18), transparent 55%),
+    linear-gradient(165deg, #e8f1fb 0%, #f4f8fc 40%, #ffffff 100%);
+}
+
+.text-gradient-brand {
+  background: linear-gradient(115deg, var(--blue-deep) 0%, var(--blue) 45%, var(--teal) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
